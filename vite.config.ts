@@ -18,5 +18,20 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  build: {
+    minify: true,
+    cssCodeSplit: true,
+    cssMinify: true,
+    rollupOptions: {
+      output: {
+        entryFileNames: 'assets/index.js',
+        chunkFileNames: 'assets/index-chunk.js',
+        assetFileNames: 'assets/[name].[ext]'
+      }
+    }
+  },
+  server: {
+    port: 3500
   }
 })
