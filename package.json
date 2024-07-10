@@ -2,24 +2,26 @@
   "name": "vue-boilerplate",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "build-only": "vite build",
+    "dev": "vite",
+    "format": "prettier --write src/",
+    "preview": "vite preview",
+    "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
     "@primevue/themes": "^4.0.0",
     "pinia": "^2.1.7",
+    "primeflex": "^3.3.1",
     "primevue": "^4.0.0",
     "sass": "^1.77.7",
     "vue": "^3.4.29"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
+    "@fullhuman/vue-cli-plugin-purgecss": "~6.0.0",
     "@primevue/auto-import-resolver": "^4.0.0",
     "@rushstack/eslint-patch": "^1.8.0",
     "@tsconfig/node20": "^20.1.4",
@@ -36,5 +38,6 @@
     "unplugin-vue-components": "^0.27.2",
     "vite": "^5.3.1",
     "vue-tsc": "^2.0.21"
-  }
+  },
+  "type": "module"
 }
