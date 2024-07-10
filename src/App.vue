@@ -2,7 +2,7 @@
 
 <template>
   <div>
-    <Button label="Click me!" />
+    <RouterView />
   </div>
 </template>
 
